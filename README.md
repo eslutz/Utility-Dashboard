@@ -22,7 +22,7 @@ A modern full-stack utility dashboard application with a Vite/React/TypeScript/T
 
 ### Prerequisites
 
-- Node.js (v16+)
+- Node.js (v22+)
 - npm
 - .NET 8 SDK
 
@@ -51,6 +51,27 @@ Runs at [https://localhost:7039](https://localhost:7039)
 #### VS Code Tasks
 
 You can run both servers together using VS Code Tasks: `Start Frontend` and `Start Backend`.
+
+#### Running with Docker Compose
+
+You can run both the frontend and backend in containers using Docker Compose:
+
+```bash
+docker compose up --build
+```
+
+- The frontend will be available at [http://localhost:5173](http://localhost:5173)
+- The backend will be available at [https://localhost:7039](https://localhost:7039)
+
+This setup uses the `Dockerfile` in each service directory and the `docker-compose.yml` at the project root. You can develop locally with hot reload thanks to the mounted volumes.
+
+#### Dev Containers & GitHub Codespaces
+
+This project supports [VS Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) and [GitHub Codespaces](https://docs.github.com/en/codespaces):
+
+- Open the project in VS Code and select "Reopen in Container" (requires the Dev Containers extension), or create a Codespace on GitHub.
+- The dev container will automatically use Docker Compose to start both frontend and backend services.
+- Workspace extension recommendations are used (see `.vscode/extensions.json`).
 
 ## API Endpoints
 

@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NODE_VERSION: 22-alpine
+    ports:
+      - '5173:5173'
+    volumes:
+      - ./frontend:/app
+    environment:
+      - NODE_ENV=development
+  backend:
+    build: ./backend/UtilityDashboard.Api
+    ports:
+      - '7039:7039'
+    volumes:
+      - ./backend/UtilityDashboard.Api:/app
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

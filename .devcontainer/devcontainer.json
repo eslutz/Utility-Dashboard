@@ -1,0 +1,7 @@
+{
+  "name": "Utility Dashboard Dev Container",
+  "dockerComposeFile": ["../docker-compose.yml"],
+  "service": "frontend",
+  "workspaceFolder": "/app",
+  "postCreateCommand": "npm install --prefix frontend && dotnet restore backend/UtilityDashboard.Api"
+}
