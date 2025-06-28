@@ -1,4 +1,6 @@
-# Utility Dashboard
+# ⚡️ Utility Dashboard
+
+[![License: Polyform Noncommercial](https://img.shields.io/badge/license-Polyform%20Noncommercial-blue)](https://polyformproject.org/licenses/noncommercial/1.0.0/)
 
 A modern full-stack utility dashboard application with a Vite/React/TypeScript/Tailwind frontend and a C# .NET 8 Web API backend.
 
