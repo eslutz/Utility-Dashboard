@@ -3,6 +3,7 @@
 ## 🎯 Goal
 
 Abstract utility data fetching logic (via API or scraping) behind a common interface so that:
+
 - New providers are easy to add
 - Core logic (dashboard, sync jobs, etc.) doesn’t depend on implementation details
 - Scraping/API complexity stays isolated and testable
@@ -210,3 +211,4 @@ public class UtilityController : ControllerBase
 	•	Store raw provider responses for debugging
 	•	Add retry and circuit-breaker logic for flaky providers
 	•	Expose sync logs or provider health in admin UI
+```
