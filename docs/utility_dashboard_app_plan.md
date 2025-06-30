@@ -131,9 +131,9 @@ The Utility Dashboard project is organized using a GitHub Project board with cus
 ### Project Details
 
 - **GitHub Project:** [Utility Dashboard](https://github.com/users/eslutz/projects/12)
-- **Total Issues:** 44 (8 epics + 36 sub-issues)
+- **Total Issues:** 48 (8 epics + 40 sub-issues)
 - **Sprint Duration:** 2 weeks (starting Mondays)
-- **Development Period:** July 21, 2025 - March 29, 2026 (18 sprints)
+- **Development Period:** July 21, 2025 - August 16, 2026 (27 sprints)
 - **Target Work:** ~8-10 story points per sprint (5-8 hours/week)
 
 ### Epic Structure
@@ -152,9 +152,10 @@ The project is organized into 8 main epics that align with the MVP goals. Each e
 
    - User registration, login, profile management, password reset
 
-4. **Provider Integration Layer** (4 issues) - _Sprints 7-9_
+4. **Provider Integration Layer** (8 issues) - _Sprints 4-18_
 
-   - Credential storage, data fetching, normalization, error handling
+   - Credential storage, provider interface, data fetching, normalization, error handling
+   - Dominion Energy (electric), Columbia Gas, Verizon Fios (internet), Chesterfield County (water/sewer), Enphase (solar API)
 
 5. **Data Aggregation & Storage** (3 issues) - _Sprints 1-10_
 
@@ -168,49 +169,56 @@ The project is organized into 8 main epics that align with the MVP goals. Each e
 
    - Endpoint creation, authentication middleware, error handling
 
-8. **Subscription & Trial Logic** (2 issues) - _Sprint 18_
+8. **Subscription & Trial Logic** (2 issues) - _Sprints 25-27_
    - Trial period implementation, subscription preparation
 
 ### Project Fields
 
 - **Status:** Backlog, Todo, In Progress, Done
 - **Priority:** Low, Medium, High, Critical
-- **Epic:** Links sub-issues to their parent epic
 - **Story Points:** 1, 2, 3, 5, 8, 13 (Fibonacci sequence)
-- **Sprint:** 18 two-week iterations (Sprint 1-18)
-- **Target Release:** MVP v1.0
-- **Work Start Date:** Date the work actually begins
-- **Work End Date:** Date the work is completed
+- **Sprint:** 27 two-week iterations (Sprint 1-27)
 
 ### Sprint Schedule
 
-> [!Note] > _Adjusted for solo development at 5-8 hours/week, targeting ~8-10 story points per sprint_
+> [!Note] > _Adjusted for solo development at 5-8 hours/week, targeting ~8-10 story points per sprint. Extended to include all 5 utility providers._
 
-- **Sprint 1:** July 21 - August 3, 2025 (Azure Bicep templates, database schema - 8 points)
-- **Sprint 2:** August 4 - August 17, 2025 (CI/CD pipelines, API scaffolding, unit testing - 9 points)
-- **Sprint 3:** August 18 - August 31, 2025 (Environment config, user registration - 8 points)
-- **Sprint 4:** September 1 - September 14, 2025 (JWT authentication, user login - 8 points)
-- **Sprint 5:** September 15 - September 28, 2025 (Entity Framework setup, repository pattern, integration testing - 10 points)
-- **Sprint 6:** September 29 - October 12, 2025 (User management API, authentication middleware - 8 points)
-- **Sprint 7:** October 13 - October 26, 2025 (Secure credential storage, provider interface - 8 points)
-- **Sprint 8:** October 27 - November 9, 2025 (Docker containerization, frontend scaffolding - 8 points)
-- **Sprint 9:** November 10 - November 23, 2025 (Dominion Energy provider, data fetching - 10 points)
-- **Sprint 10:** November 24 - December 7, 2025 (Data aggregation service, data normalization - 8 points)
-- **Sprint 11:** December 8 - December 21, 2025 (Dashboard layout, navigation - 8 points)
-- **Sprint 12:** December 22, 2025 - January 4, 2026 (Utility metrics visualization, charts - 10 points)
-- **Sprint 13:** January 5 - January 18, 2026 (Utility data API, provider management API - 8 points)
-- **Sprint 14:** January 19 - February 1, 2026 (End-to-end testing, user journey automation - 8 points)
-- **Sprint 15:** February 2 - February 15, 2026 (Provider management UI, authentication UI - 8 points)
-- **Sprint 16:** February 16 - March 1, 2026 (Quality gates, monitoring setup - 10 points)
-- **Sprint 17:** March 2 - March 15, 2026 (Error handling, password reset, user profile - 8 points)
-- **Sprint 18:** March 16 - March 29, 2026 (Subscription logic, trial features - 8 points)
+- **Sprint 1:** July 21 - August 3, 2025 (Frontend project setup, Azure Bicep templates - **6 points**)
+- **Sprint 2:** August 4 - August 17, 2025 (User registration, API setup - **10 points**)
+- **Sprint 3:** August 18 - August 31, 2025 (Database schema, CI/CD pipeline setup - **10 points**)
+- **Sprint 4:** September 1 - September 14, 2025 (JWT authentication, environment config - **7 points**)
+- **Sprint 5:** September 15 - September 28, 2025 (User profile management, unit testing framework - **5 points**)
+- **Sprint 6:** September 29 - October 12, 2025 (Provider interface abstraction - **5 points**)
+- **Sprint 7:** October 13 - October 26, 2025 (Secure credential storage - **8 points**)
+- **Sprint 8:** October 27 - November 9, 2025 (Integration testing, password reset functionality - **6 points**)
+- **Sprint 9:** November 10 - November 23, 2025 (Data normalization & validation - **5 points**)
+- **Sprint 10:** November 24 - December 7, 2025 (Data aggregation service - **8 points**)
+- **Sprint 11:** December 8 - December 21, 2025 (Repository pattern implementation, Docker & containerization - **7 points**)
+- **Sprint 12:** January 5 - January 18, 2026 (User management API endpoints - **8 points**)
+- **Sprint 13:** January 19 - February 1, 2026 (Provider management API endpoints - **8 points**)
+- **Sprint 14:** February 2 - February 15, 2026 (Utility data API endpoints - **8 points**)
+- **Sprint 15:** February 16 - March 1, 2026 (Dashboard layout and navigation - **5 points**)
+- **Sprint 16:** March 2 - March 15, 2026 (Authentication UI components - **8 points**)
+- **Sprint 17:** March 16 - March 29, 2026 (Utility metrics visualization - **8 points**)
+- **Sprint 18:** March 30 - April 12, 2026 (Provider management interface - **8 points**)
+- **Sprint 19:** April 13 - April 26, 2026 (End-to-end testing - **3 points**)
+- **Sprint 20:** April 27 - May 10, 2026 (Dominion Energy provider implementation - **13 points**)
+- **Sprint 21:** May 11 - May 24, 2026 (Columbia Gas provider implementation - **13 points**)
+- **Sprint 22:** May 25 - June 7, 2026 (Verizon Fios provider implementation - **13 points**)
+- **Sprint 23:** June 8 - June 21, 2026 (Chesterfield County provider implementation - **13 points**)
+- **Sprint 24:** June 22 - July 5, 2026 (Enphase Solar API provider - **8 points**)
+- **Sprint 25:** July 6 - July 19, 2026 (Subscription status tracking - **5 points**)
+- **Sprint 26:** July 20 - August 2, 2026 (Subscription-based access control, Monitoring & logging - **8 points**)
+- **Sprint 27:** August 3 - August 16, 2026 (Quality gates, payment infrastructure - **5 points**)
 
 ### Project Views
 
 The GitHub Project includes multiple views for different perspectives:
 
 - **Backlog View:** All issues grouped by epic with priority sorting
-- **Kanban View:** Status-based workflow (Backlog → Todo → In Progress → Done)
+- **Epic Tracking:** Issues grouped by epic, showing progress and status
+- **Sprint Tracking:** Issues grouped by sprint, showing progress and status
+- **Kanban View:** Status-based workflow (Backlog → Todo → In Progress → In Review → Done)
 - **Roadmap View:** Timeline visualization of epics and sprints
 
 All issues are currently in the Backlog status, with sprint assignments distributed according to the realistic timeline above for solo development.
