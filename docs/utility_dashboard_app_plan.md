@@ -115,12 +115,10 @@ A customizable web dashboard for homeowners to monitor and manage their utility 
 ## 🚀 Future Features
 
 - Support for more providers and regions
-- Automated/scheduled data refresh
 - Advanced analytics and forecasting
 - Notifications for unusual usage or billing
 - Multi-user/household support
-- Mobile app (PWA or native)
-- Integration with smart home devices
+- Mobile app (PWA)
 
 ---
 
@@ -131,7 +129,7 @@ The Utility Dashboard project is organized using a GitHub Project board with cus
 ### Project Details
 
 - **GitHub Project:** [Utility Dashboard](https://github.com/users/eslutz/projects/12)
-- **Total Issues:** 48 (8 epics + 40 sub-issues)
+- **Total Issues:** 44 (36 implementation issues)
 - **Sprint Duration:** 2 weeks (starting Mondays)
 - **Development Period:** July 21, 2025 - August 16, 2026 (27 sprints)
 - **Target Work:** ~8-10 story points per sprint (5-8 hours/week)
@@ -140,37 +138,37 @@ The Utility Dashboard project is organized using a GitHub Project board with cus
 
 The project is organized into 8 main epics that align with the MVP goals. Each epic spans from its first implementation sprint to its completion:
 
-1. **Infrastructure & Deployment** (5 issues) - _Sprints 1-16_
+1. **Infrastructure & Deployment** (5 issues) - _Sprints 1-26_
 
-   - Azure resource provisioning, CI/CD pipelines, environment setup, monitoring
+   - Azure resource provisioning, CI/CD pipelines, environment setup, Docker containerization, monitoring
 
-2. **Testing & Quality Assurance** (4 issues) - _Sprints 2-16_
+2. **Testing & Quality Assurance** (4 issues) - _Sprints 5-27_
 
-   - Unit testing, integration testing, code coverage, quality gates
+   - Unit testing, integration testing, end-to-end testing, code quality gates
 
-3. **User Authentication & Management** (4 issues) - _Sprints 3-17_
+3. **User Authentication & Management** (4 issues) - _Sprints 2-8_
 
-   - User registration, login, profile management, password reset
+   - User registration, JWT authentication, profile management, password reset
 
-4. **Provider Integration Layer** (8 issues) - _Sprints 4-18_
+4. **Provider Integration Layer** (8 issues) - _Sprints 6-24_
 
-   - Credential storage, provider interface, data fetching, normalization, error handling
-   - Dominion Energy (electric), Columbia Gas, Verizon Fios (internet), Chesterfield County (water/sewer), Enphase (solar API)
+   - Provider interface abstraction, secure credential storage, data normalization
+   - Specific provider implementations: Dominion Energy (electric), Columbia Gas, Verizon Fios (internet), Chesterfield County (water/sewer), Enphase (solar API)
 
-5. **Data Aggregation & Storage** (3 issues) - _Sprints 1-10_
+5. **Data Aggregation & Storage** (3 issues) - _Sprints 3-11_
 
-   - Database schema, Entity Framework setup, data models
+   - Database schema design, data aggregation service, repository pattern implementation
 
-6. **Dashboard UI Components** (4 issues) - _Sprints 8-15_
+6. **Dashboard UI Components** (5 issues) - _Sprints 1-18_
 
-   - Main dashboard, charts/visualizations, responsive design, navigation
+   - Frontend project setup, dashboard layout, authentication UI, utility metrics visualization, provider management interface
 
-7. **API Layer Development** (3 issues) - _Sprints 2-13_
+7. **API Layer Development** (4 issues) - _Sprints 2-14_
 
-   - Endpoint creation, authentication middleware, error handling
+   - API project setup, user management endpoints, provider management endpoints, utility data endpoints
 
-8. **Subscription & Trial Logic** (2 issues) - _Sprints 25-27_
-   - Trial period implementation, subscription preparation
+8. **Subscription & Trial Logic** (3 issues) - _Sprints 25-27_
+   - Subscription status tracking, access control, payment infrastructure preparation
 
 ### Project Fields
 
@@ -215,13 +213,11 @@ The project is organized into 8 main epics that align with the MVP goals. Each e
 
 The GitHub Project includes multiple views for different perspectives:
 
-- **Backlog View:** All issues grouped by epic with priority sorting
+- **Backlog:** All issues grouped by epic with priority sorting
 - **Epic Tracking:** Issues grouped by epic, showing progress and status
 - **Sprint Tracking:** Issues grouped by sprint, showing progress and status
-- **Kanban View:** Status-based workflow (Backlog → Todo → In Progress → In Review → Done)
-- **Roadmap View:** Timeline visualization of epics and sprints
-
-All issues are currently in the Backlog status, with sprint assignments distributed according to the realistic timeline above for solo development.
+- **Kanban Board:** Status-based workflow (Backlog → Todo → In Progress → In Review → Done)
+- **Roadmap:** Timeline visualization of epics and sprints
 
 ---
 
