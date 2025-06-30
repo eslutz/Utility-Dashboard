@@ -245,4 +245,4 @@ The GitHub Project includes multiple views for different perspectives:
 - **Backend & API:** Azure App Service (recommended for .NET 8 Minimal API; supports Docker and easy scaling)
 - **Frontend:** Azure Static Web Apps (SWA) (best for seamless Azure integration, built-in auth, and unified management)
 - **Database:** Azure Database for PostgreSQL (fully managed, scalable, and integrates with other Azure services)
-- **Payment Processor:** Stripe (widely supported, easy .NET integration, good for subscriptions)
+- **Payment Processor:** [Creem](https://creem.io) ([docs](https://docs.creem.io/introduction), modern SaaS-focused, optimized for managing subscriptions and license keys, REST API & JS SDK) or [Polar](https://polar.sh) ([docs](https://docs.polar.sh/), open source, supports recurring subscriptions and metered billing, REST API & JS SDK). Both support secure frontend integration (React/Vite) to collect payment details and create sessions, with all critical validation and access control handled on the backend after payment confirmation.
