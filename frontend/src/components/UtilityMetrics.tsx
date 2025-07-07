@@ -5,7 +5,7 @@ interface UtilityMetric {
   type: string;
   value: number;
   unit: string;
-  date: string;
+  date?: string;
 }
 
 export const UtilityMetrics = () => {
@@ -59,9 +59,9 @@ export const UtilityMetrics = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {metrics.map((metric, index) => (
+      {metrics.map((metric) => (
         <div
-          key={index}
+          key={`${metric.type}-${metric.value}`}
           className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
         >
           <h3 className="font-medium text-gray-500">{metric.type}</h3>
@@ -69,9 +69,11 @@ export const UtilityMetrics = () => {
             <span className="text-3xl font-bold">{metric.value}</span>
             <span className="text-gray-500">{metric.unit}</span>
           </div>
-          <div className="mt-2 text-sm text-gray-400">
-            Last updated: {new Date(metric.date).toLocaleString()}
-          </div>
+          {metric.date && (
+            <div className="mt-2 text-sm text-gray-400">
+              Last updated: {new Date(metric.date).toLocaleString()}
+            </div>
+          )}
         </div>
       ))}
     </div>

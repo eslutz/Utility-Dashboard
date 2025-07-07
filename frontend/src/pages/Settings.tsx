@@ -40,6 +40,8 @@ const Settings = () => {
                 </div>
                 <button
                   onClick={() => setNotifications(!notifications)}
+                  aria-pressed={notifications}
+                  aria-label="Toggle notifications"
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                     notifications ? 'bg-blue-600' : 'bg-gray-200'
                   }`}

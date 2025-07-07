@@ -33,6 +33,7 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
+                aria-current={item.current ? 'page' : undefined}
                 className={classNames(
                   item.current
                     ? 'border-blue-500 text-blue-600'
