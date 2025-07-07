@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fetchUtilityMetrics } from '../services/api';
 
 interface UtilityMetric {
+  id: string; // Now required after processing
   type: string;
   value: number;
   unit: string;
@@ -18,7 +19,12 @@ export const UtilityMetrics = () => {
       try {
         setLoading(true);
         const data = await fetchUtilityMetrics();
-        setMetrics(data);
+        // Ensure each metric has a stable ID
+        const metricsWithIds = data.map((metric: any, index: number) => ({
+          ...metric,
+          id: metric.id || `${metric.type}-${index}`,
+        }));
+        setMetrics(metricsWithIds);
         setError(null);
       } catch (err) {
         setError('Failed to load utility metrics. Please try again later.');
@@ -61,7 +67,7 @@ export const UtilityMetrics = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {metrics.map((metric) => (
         <div
-          key={`${metric.type}-${metric.value}`}
+          key={metric.id}
           className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
         >
           <h3 className="font-medium text-gray-500">{metric.type}</h3>
