@@ -6,7 +6,7 @@ import * as apiService from '../../src/services/api';
 describe('UtilityMetrics', () => {
   it('renders loading state initially', () => {
     vi.spyOn(apiService, 'fetchUtilityMetrics').mockImplementation(
-      () => new Promise((resolve) => setTimeout(() => resolve([]), 100))
+      () => new Promise(resolve => setTimeout(() => resolve([]), 100))
     );
 
     render(<UtilityMetrics />);

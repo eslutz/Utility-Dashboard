@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { fetchUtilityMetrics } from "../services/api";
+import { useState, useEffect } from 'react';
+import { fetchUtilityMetrics } from '../services/api';
 
 interface UtilityMetric {
   type: string;
@@ -21,7 +21,7 @@ export const UtilityMetrics = () => {
         setMetrics(data);
         setError(null);
       } catch (err) {
-        setError("Failed to load utility metrics. Please try again later.");
+        setError('Failed to load utility metrics. Please try again later.');
         console.error(err);
       } finally {
         setLoading(false);
@@ -47,7 +47,10 @@ export const UtilityMetrics = () => {
 
   if (error) {
     return (
-      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <div
+        className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
+        role="alert"
+      >
         <strong className="font-bold">Error!</strong>
         <span className="block sm:inline"> {error}</span>
       </div>
@@ -57,13 +60,18 @@ export const UtilityMetrics = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {metrics.map((metric, index) => (
-        <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+        <div
+          key={index}
+          className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+        >
           <h3 className="font-medium text-gray-500">{metric.type}</h3>
           <div className="flex items-end gap-2 mt-2">
             <span className="text-3xl font-bold">{metric.value}</span>
             <span className="text-gray-500">{metric.unit}</span>
           </div>
-          <div className="mt-2 text-sm text-gray-400">Last updated: {new Date(metric.date).toLocaleString()}</div>
+          <div className="mt-2 text-sm text-gray-400">
+            Last updated: {new Date(metric.date).toLocaleString()}
+          </div>
         </div>
       ))}
     </div>
