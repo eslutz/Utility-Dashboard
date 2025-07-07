@@ -22,6 +22,8 @@ const Settings = () => {
               </div>
               <button
                 onClick={toggleTheme}
+                aria-pressed={theme === 'dark'}
+                aria-label="Toggle theme"
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 {theme === 'light' ? 'Dark' : 'Light'} Mode
